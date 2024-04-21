@@ -46,6 +46,7 @@ export default function Tabs(){
         >
             {tabs.map((tab) => (
                 <Tab.Screen
+                key={tab.name}
                 name={tab.name}
                 component={tab.component}
                 options={{
