@@ -7,7 +7,7 @@ import { EntradaTexto } from './componentes/EntradaTexto'
 import { Botao } from './componentes/Botao'
 import { secoes } from './utils/CadastroEntradaTexto'
 
-export default function Login() {
+export default function Cadastro() {
   const [numSecao, setNumSecao] = useState(0);
 
   function avancarSecao(){
@@ -37,7 +37,7 @@ export default function Login() {
           secoes[numSecao]?.entradaTexto?.map(entrada => {
             return <EntradaTexto 
             label={entrada.label} 
-            placeholder={entrada.placeholder} key={entrada.id} />
+            placeholder={entrada.placeholder} key={entrada.id} secureTextEntry={entrada.secureTextEntry || false} />
           })
         }
       </Box>
